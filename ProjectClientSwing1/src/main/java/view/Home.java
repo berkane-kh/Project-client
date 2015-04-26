@@ -19,6 +19,7 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() throws IOException, JAXBException{
         initComponents();
+        this.setTitle("Gestion des CV");
         ListCV listeCvs=MyClient.getCvs();
         for (int i=0;i<listeCvs.getListecv().size();i++){
             TableCV.setValueAt(i, i, 0);
@@ -176,14 +177,8 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        try {
-            MyClient.PostCv();
-        } catch (IOException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (JAXBException ex) {
-            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
+        new formulaire().setVisible(true);
+        this.setVisible(false);
 
     }
 

@@ -27,6 +27,14 @@ import model.ListCV;
  */
 public class MyClient {
 
+    /**
+     *
+     * Methode qui permet d'appeler le serveur pour récupérer la liste des CVs
+     *
+     * @return
+     * @throws IOException
+     * @throws JAXBException
+     */
     public static ListCV getCvs () throws IOException, JAXBException{
 
         URL url = new URL("https://project-server-rest.herokuapp.com/rest/resume/");
@@ -48,7 +56,7 @@ public class MyClient {
     }
 
     /**
-     * Fonction qui récupère un CV à partir d'un ID
+     * Methode  qui permet d'appler le serveur pour récupèrer un CV à partir d'un ID
      *
      * @param id
      * @return
@@ -76,7 +84,15 @@ public class MyClient {
 
     }
 
-    public static void PostCv () throws IOException, JAXBException{
+    /**
+     *
+     * Methode qui permet d'appeler le service pour ajouter un CV
+     *
+     * @param cv_test
+     * @throws IOException
+     * @throws JAXBException
+     */
+    public static void PostCv (CV_Test cv_test) throws IOException, JAXBException{
 
         String url = "https://project-server-rest.herokuapp.com/rest/resume/add)";
         JAXBContext jaxbContext = JAXBContext.newInstance(ListCV.class,CV_Test.class,Experience.class, Formation.class,Langue.class,CentreInteret.class);
@@ -85,27 +101,7 @@ public class MyClient {
 
         Client client = Client.create();
         WebResource webResource = client.resource("https://project-server-rest.herokuapp.com/rest/resume/add");
-
-
-        /***********************  Creation CV ***********/
-        CV_Test cv = new CV_Test();
-        cv.name="CRB";
-        cv.prenom="Arsenal";
-        cv.dateNaiss="12/12/12";
-        cv.adresse="rouen france";
-        cv.tel="0124587";
-        //Formation
-        cv.listeForm.add(new Formation("F1","F2","F3") );
-        //Experience
-        cv.listeExper.add(new Experience("EXP1","01-02","lieu1"));
-        //Centre interet
-        cv.listeCentr.add(new CentreInteret("Sport"));
-        //Langue
-        cv.listeLang.add(new Langue("Arabe", "langue maternelle"));
-
-        ClientResponse clientResponse = webResource.accept("application/xml").post(ClientResponse.class , cv);
-
-
+        ClientResponse send = webResource.accept("application/xml").post(ClientResponse.class , cv_test);
 
 
     }
