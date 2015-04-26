@@ -1,0 +1,41 @@
+/*************************************************************************************************/
+/********* Application Client Swing pour intérroger un service Rest *****************************/
+/***********************************************************************************************/
+
+Etapes d'utilisation :
+/***** GET  ******/
+1) La fenetre principale (Home) permet l'affichage et de lister tous les CVs présents dans la liste statique du serveur.
+
+L'utilisateur à la possiblité à partir de cette interface :
+ 
+ /****** GET (à partir d'un identifiant id) ***********/
+ 
+ -) Soit il clique sur le button Details CV pour voir le détail d'un CV à partir de la liste
+ -) Soit il charche un CV par son identifiant (id) dans un champs 
+ 
+ 
+ /************** RMQ  **************/
+ La gestion des champs vides ainsi qu'un identifiant non existant n'est pas gérée -----> Exception
+ ----> Il faut taper un identifiant qui existe afin de pouvoir voir cette fonctionnalité.
+ 
+ /******** POST *********/
+ 
+ L'utilisateur a la possiblité d'ajouter un CV en cliquant sur le button " Nouveau CV"
+ 
+/******* Remarque *********/
+
+La gestion des champs vides n'est pas gérée il faut que l'utilisateur remplit tout les champs afin de pouvoir ajouter un CV.
+
+
+/******************************************************************************************************************************/
+/********************* Method de serialisation et deserialisation ************************************************************/
+/****************************************************************************************************************************/ 
+
+Dans le cadre de ce projet j'ai utilisé l'API JAXB à travers le mapping d'un document XML à des objets (unmarshalling) 
+ainsi que la création d'un document XML à partir d'objets (marshalling).
+
+
+
+ 
+ 
+ 
