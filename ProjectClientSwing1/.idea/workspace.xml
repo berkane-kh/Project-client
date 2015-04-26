@@ -105,7 +105,7 @@
       <file leaf-file-name="CvDetails.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/view/CvDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66062176" vertical-offset="204" max-vertical-offset="6460">
+            <state vertical-scroll-proportion="-0.9248705" vertical-offset="816" max-vertical-offset="6460">
               <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -662,12 +662,12 @@
       <created>1430060203783</created>
       <option name="number" value="Default" />
       <updated>1430060203783</updated>
-      <workItem from="1430060208058" duration="6676000" />
+      <workItem from="1430060208058" duration="8503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6676000" />
+    <option name="totallyTimeSpent" value="8503000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -819,7 +819,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/view/CvDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66062176" vertical-offset="204" max-vertical-offset="6460">
+        <state vertical-scroll-proportion="-0.9248705" vertical-offset="816" max-vertical-offset="6460">
           <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
